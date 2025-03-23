@@ -68,7 +68,7 @@ function DragAndDropUpload({ onUpload }: DragAndDropUploadProps) {
 
   // Remove the selected file from the state
   const handleRemoveFile = (id: string) => {
-    setFiles(files.filter((file) => file.id !== id)); // Remove the file from the state
+    setFiles(files.filter((file: { id: string; }) => file.id !== id)); // Remove the file from the state
   };
 
   // Handle the image change (select a new image to replace the current one)
@@ -84,7 +84,7 @@ function DragAndDropUpload({ onUpload }: DragAndDropUploadProps) {
           const reader = new FileReader();
           reader.onloadend = () => {
             // Update the state with the new file
-            setFiles((prevFiles) =>
+            setFiles((prevFiles: any[]) =>
               prevFiles.map((f) =>
                 f.id === id
                   ? {
