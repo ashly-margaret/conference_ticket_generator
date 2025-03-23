@@ -1,0 +1,20 @@
+
+.app{
+  background-image: url("./assets/images/pattern-lines.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+  .bottomLeft{
+   position: absolute;
+   bottom: 0;
+   left: 0;
+  }
+  .topRight{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+

@@ -1,0 +1,97 @@
+.ticket_conatiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  .title {
+    color: white;
+    h1 {
+      .span {
+        background: linear-gradient(to right, #f37362, #ffffff); /* Gradient */
+        -webkit-background-clip: text; /* Ensures the gradient is clipped to the text */
+        color: transparent; /* Make the text transparent so the gradient shows */
+      }
+    }
+  }
+  .desc {
+    color: white;
+    width: 300px;
+    font-size: 16px;
+    div {
+      color: #e16151;
+    }
+  }
+  .ticket_generator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 20px;
+
+    .ticket {
+      background-image: url("../../assets/images/pattern-ticket.svg"); /* The image used */
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover; /* Resize the background image to cover the entire container */
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      .left {
+        .top {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          margin-bottom: 30px;
+          .top_right {
+           text-align: left;
+           .hedaing{
+            font-size: 20px;
+            font-weight: bold;
+            // margin: 0px;
+           }
+           
+          }
+        }
+        .bottom {
+          display: flex;
+          gap: 6px;
+          margin-top: 30px;
+          .bottom_left {
+            .imageAvatar {
+              width: 50px;
+              border-radius: 5px;
+            }
+          }
+          .bottom_right {
+            .name {
+              width: 200px;
+              text-align: left;
+              word-wrap: break-word; /* Ensure the text wraps if it exceeds the width */
+              h3 {
+                margin: 0px;
+              }
+            }
+            .user_name {
+              display: flex;
+              align-items: center;
+              width: 200px;
+              text-align: left;
+              word-wrap: break-word; /* Ensure the text wraps if it exceeds the width */
+            }
+          }
+        }
+      }
+      .right {
+        .ticketNumber {
+          transform: rotate(90deg); /* Rotate text by 90 degrees */
+          transform-origin: center; /* Optional: Adjusts where the rotation starts */
+          white-space: nowrap; /* Ensures the text doesn't break into multiple lines */
+        }
+      }
+    }
+  }
+}

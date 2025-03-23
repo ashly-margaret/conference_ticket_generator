@@ -1,0 +1,95 @@
+.main {
+  width: 100%;
+  text-align: center;
+
+  /* Style for input fields with errors */
+  .input-error {
+    border: 2px solid red;
+    background-color: #fdd; /* Light red background */
+  }
+
+  .error-text {
+    color: #ff000085;
+    font-size: 0.875rem;
+    margin-top: 5px;
+  }
+  .container {
+    width: 50%;
+    margin: 0 auto;
+    .title {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      .logoMark {
+        width: 20px;
+      }
+      .titleDesc {
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+    .mainTitle {
+      color: white;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      h1 {
+        margin: 0;
+      }
+    }
+  }
+  .text {
+    color: white;
+    padding-top: 10px;
+  }
+  .formContainer {
+    padding-top: 30px;
+
+    .form {
+      .warningText {
+        color: white;
+        padding-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .form_inputbox {
+        margin-bottom: 20px; /* Adds space below the input box */
+        width: 100%; /* Makes the input box take up the full width of its parent */
+        text-align: left;
+        .form_label {
+          color: #ffff;
+          padding-bottom: 10px;
+        }
+        .input {
+          width: 100%; /* Make the input box take up the full width of its container */
+          font-size: 14px; /* Set font size */
+          border: 1px solid #ccc; /* Set border color */
+          border-radius: 5px; /* Round the corners of the input box */
+          outline: none; /* Remove the default outline when the input is focused */
+          transition: border-color 0.3s ease; /* Add transition for smooth border color change */
+          background: rgba(72, 68, 108, 0.4196078431);
+          padding: 10px 10px; /* Consistent padding */
+          color: white;
+          cursor: pointer;
+        }
+        .input:focus {
+          background: #37354d;
+        }
+      }
+
+      .submit_btn {
+        background: #f67464;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 13px;
+        width: 100%;
+        color: #0c082b;
+        font-weight: 600;
+      }
+    }
+  }
+}
