@@ -42,7 +42,7 @@ function Ticket(props:any) {
                 </div>
                 <div className="bottom">
                     <div className="bottom_left">
-                        <img  src={URL.createObjectURL(props?.formData?.avatar)} alt="ImageAvatr" className='imageAvatar' />
+                        <img  src={URL.createObjectURL(props?.formData?.avatar)} alt="" className='imageAvatar' />
                     </div>
                     <div className="bottom_right">
                         <div className='name'>
