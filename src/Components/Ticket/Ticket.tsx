@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import './Ticket.scss'
 import logoMark from '../../assets/images/logo-mark.svg'
-import ImageAvatr from '../../assets/images/image-avatar.jpg'
 import IconGit from '../../assets/images/icon-github.svg'
 
 function Ticket(props:any) {

@@ -71,37 +71,7 @@ function DragAndDropUpload({ onUpload }: DragAndDropUploadProps) {
     setFiles(files.filter((file: { id: string; }) => file.id !== id)); // Remove the file from the state
   };
 
-  // Handle the image change (select a new image to replace the current one)
-  const handleChangeFile = (id: string) => {
-    const fileInput = document.getElementById("fileInput") as HTMLInputElement;
-    if (fileInput) {
-      // Clear the file input value to allow selecting the same file again
-      fileInput.value = ""; // Reset the file input
-      fileInput.click(); // Open the file input dialog
-      fileInput.onchange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        if (e.target.files) {
-          const file = e.target.files[0]; // Get the first selected file
-          const reader = new FileReader();
-          reader.onloadend = () => {
-            // Update the state with the new file
-            setFiles((prevFiles: any[]) =>
-              prevFiles.map((f) =>
-                f.id === id
-                  ? {
-                      ...f,
-                      preview: reader.result as string,
-                      name: file.name,
-                      size: file.size,
-                    }
-                  : f
-              )
-            );
-          };
-          reader.readAsDataURL(file); // Read the new file as a data URL
-        }
-      };
-    }
-  };
+ 
 
   return (
     <div className="dragAndDropUpload">
@@ -146,12 +116,7 @@ function DragAndDropUpload({ onUpload }: DragAndDropUploadProps) {
                   >
                     Remove
                   </button>
-                  {/* <button
-                    className="change-btn"
-                    onClick={() => handleChangeFile(file.id)}
-                  >
-                    Change
-                  </button> */}
+                 
                 </div>
               </div>
             ))}
